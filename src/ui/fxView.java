@@ -16,7 +16,14 @@ public class fxView implements View{
     }
 
     @Override
-    public void showMenu() {
+    public void exit() {
 
     }
+
+    @Override
+    public void showRezult(String rezult) {
+
+    }
+
+
 }

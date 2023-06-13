@@ -11,6 +11,38 @@ public class Presenter {
 
     public Presenter() {
         this.view = new ConsoleView(this);
-        this.service = new CalculatorService();
+        this.service = new CalculatorService(this);
+    }
+
+    public View getView() {
+        return view;
+    }
+
+    public Service getService() {
+        return service;
+    }
+
+    public void enterLeft() {
+        getService().setLeftNumber();
+    }
+
+    public void enterRight() {
+        getService().setRightNumber();
+    }
+
+    public void deside() {
+        view.showRezult(service.deside());
+    }
+
+    public void multy() {
+        view.showRezult(service.multy());
+    }
+
+    public void minus() {
+        view.showRezult(service.minus());
+    }
+
+    public void plus() {
+        view.showRezult(service.plus());
     }
 }

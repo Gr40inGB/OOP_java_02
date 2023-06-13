@@ -12,4 +12,9 @@ public abstract class Command implements CommandService {
     public View getView() {
         return view;
     }
+
+    @Override
+    public String toString() {
+        return getDescription();
+    }
 }
